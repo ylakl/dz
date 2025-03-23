@@ -1,0 +1,9 @@
+---
+- name: build project
+  hosts: all
+  become: yes
+  tasks:
+    - name:create and start docker compose services
+      command: docker compose up -d
+      tags: create
+
