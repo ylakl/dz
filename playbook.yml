@@ -3,6 +3,27 @@
   hosts: all
   become: yes
   tasks:
+    - name: Apt update
+      apt:
+        update_cache: yes
+    - name: install packages
+      apt:
+        name:
+          - git
+          - docker.io
+        state: present
+
+    - name: git clone project
+      git:
+        repo: https://github.com/ylakl/video_strem.git
+        dest: /video_strem
+        force: yes
+    
+    - name: Docker-compose install
+      shell: |
+        curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+        chmod +x /usr/local/bin/docker-compose
+
     - name:create and start docker compose services
       command: docker compose up -d
       tags: create
