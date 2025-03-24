@@ -14,6 +14,7 @@ pipeline {
         stage ('Provisioning for build instance') {
             steps {
             dir('terraform') {
+                sh 'pwd'
                 sh 'terraform init && terraform plan && terraform apply -auto-approve'
             }
         }
