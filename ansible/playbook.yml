@@ -24,7 +24,7 @@
         curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
         chmod +x /usr/local/bin/docker-compose
 
-    - name:create and start docker compose services
+    - name: create and start docker compose services
       command: docker compose up -d
       tags: create
 
