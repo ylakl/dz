@@ -35,7 +35,7 @@ pipeline {
             steps {
                 ansiblePlaybook(
                    playbook: 'ansible/playbook.yml',
-                   inventory: "${INSTANCE_IP},",
+                   inventory: "${INSTANCE_IP}",
                    credentialsId: 'ssh'
                    )
             }
