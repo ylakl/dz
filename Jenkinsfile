@@ -5,6 +5,7 @@ pipeline {
         stage ('Preparing terraform') {
             steps {
             dir('terraform') {
+               sh 'pwd'
                sh 'cp .terraformrc ~/'
             }
         }
