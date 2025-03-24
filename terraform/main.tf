@@ -23,7 +23,6 @@ resource "yandex_compute_instance" "vm" {
   }
 
   boot_disk {
-    disk_type = "network-hdd"
     auto_delete = true
     initialize_params {
       image_id = "fd8vmcue7aajpmeo39kk"
@@ -39,7 +38,5 @@ resource "yandex_compute_instance" "vm" {
     user-data = file("${path.module}/cloud_config.yaml")
     ssh-keys = file("${path.module}/ssh-keys.yaml")
   }
- output "instance_ip" {
-  value = yandex_compute_instance.vm[0].network_interface[0].nat_ip_address
-  }
+
 }
