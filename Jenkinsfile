@@ -22,12 +22,14 @@ pipeline {
     }
         stage('Ansible Deploy') {
             steps {
+            dir('terraform') {    
                 script {
                     sh 'pwd'
                     def output = sh(script: "terraform output -json instance_ip", returnStdout: true)
                     env.INSTANCE_IP = readJSON(text: output).value[0]
                    }
                 }
+              }
             }
         stage('Deploy Application') {
             steps {
