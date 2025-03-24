@@ -36,7 +36,7 @@ pipeline {
                 ansiblePlaybook(
                    playbook: 'ansible/playbook.yml',
                    inventory: "${INSTANCE_IP},",
-                   credentialsId: 'ansible-ssh-key-id'
+                   credentialsId: 'ssh'
                    )
             }
         }
