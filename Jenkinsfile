@@ -8,6 +8,7 @@ pipeline {
                sh 'cp .terraformrc ~/'
             }
         }
+    }    
 
         stage ('Provisioning for build instance') {
             steps {
@@ -15,6 +16,7 @@ pipeline {
                 sh 'terraform init && terraform plan && terraform apply -auto-approve'
             }
         }
+    }
         stage('Ansible Deploy') {
             steps {
                 script {
