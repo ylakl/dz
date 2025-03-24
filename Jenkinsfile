@@ -6,7 +6,8 @@ pipeline {
             steps {
             dir('terraform') {
                sh 'pwd'
-   
+               sh 'll'
+               sh 'cp .terraformrc ~/'
             }
         }
     }    
