@@ -26,7 +26,7 @@ pipeline {
                 script {
                     sh 'pwd'
                     def output = sh(script: "terraform output -json instance_ip", returnStdout: true)
-                    env.INSTANCE_IP = readJSON(text: output).value[0]
+                    env.INSTANCE_IP = output
                    }
                 }
               }
