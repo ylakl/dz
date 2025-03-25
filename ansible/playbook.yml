@@ -25,6 +25,6 @@
         chmod +x /usr/local/bin/docker-compose
 
     - name: create and start docker compose services
-      command: docker compose up -d
+      command: docker-compose up -d
       tags: create
 
