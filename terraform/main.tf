@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "yandex" {
-  token     = "t1.9euelZrLkpWYiciaz5TNnZadiZnJkO3rnpWazJeRms-Mx8nIiYmNycnHlY7l8_d3UnlA-e9EYS4m_t3z9zcBd0D570RhLib-zef1656Vms6Nz5vJmIrKm52azpmPi8ec7_zF656Vms6Nz5vJmIrKm52azpmPi8ec.tVotiqDcSqBXVuZ1FYqQ853L4USyz_f29GP7OVwiJ6UwLFqahVaYmE9xXlOWVpVJoEBh3JSXc88R_4k_HoSJCw"
+  token     = "t1.9euelZqOx5bIxpORipyWls7Ol8-emO3rnpWazJeRms-Mx8nIiYmNycnHlY7l8_c-KHRA-e9_Twdg_N3z935WcUD5739PB2D8zef1656VmsiVmI3Gypebj8eTzpOSk8yc7_zF656VmsiVmI3Gypebj8eTzpOSk8yc.L2-xcupygxyDbzCpuECs0qahjH2conXsrBqT4Vk5prTvPs3rL881c6fRv1AECzLQ7Y-rzJ95ayiqGmKLFDacBw"
   cloud_id  = "b1guukrlolhh89d8t696"
   folder_id = "b1gctg2bhvuagrakii2l"
   zone      = "ru-central1-d"
